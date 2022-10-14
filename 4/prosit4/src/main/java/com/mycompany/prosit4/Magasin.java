@@ -110,7 +110,7 @@ public class Magasin {
             System.out.println("Produit no : " + this.ensprod[i].getIdentifiant() + " | " + this.ensprod[i].getLibelle() + " | " + this.ensprod[i].getPrix() + " | " + this.ensprod[i].getDateexp());
         }
      
-                System.out.println("ces employees ----- : ");
+                System.out.println("ces employes ----- : ");
                 for (int i = 0; i <= this.ecapacite - 1; i++) {
            this.employes[i].AfficherDetails() ;
        

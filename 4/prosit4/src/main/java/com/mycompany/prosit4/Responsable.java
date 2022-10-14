@@ -24,9 +24,9 @@ public class Responsable extends Employe {
     public void AfficherSalaire() {
 
         if (this.getNbr_heures() > 160) {
-            System.out.println("la salaire de l'employee (responsable) " + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((160 * 10) + this.prime + ((this.getNbr_heures() - 160) * 12)));
+            System.out.println("la salaire de l'employe (responsable) " + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((160 * 10) + this.prime + ((this.getNbr_heures() - 160) * 12)));
         } else {
-            System.out.println("la salaire de l'employee (responsable) " + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((this.getNbr_heures() * 10) + this.prime));
+            System.out.println("la salaire de l'employe (responsable) " + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((this.getNbr_heures() * 10) + this.prime));
         }
 
     }

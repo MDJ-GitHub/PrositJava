@@ -23,7 +23,7 @@ public class Vendeur extends Employe {
         
      public void AfficherSalaire() {
 
-            System.out.println("la salaire de l'employee (vendeur) " + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((450 * (1 + (this.tauxDeVente / 100)))));
+            System.out.println("la salaire de l'employe (vendeur) " + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((450 * (1 + (this.tauxDeVente / 100)))));
 
 
     }

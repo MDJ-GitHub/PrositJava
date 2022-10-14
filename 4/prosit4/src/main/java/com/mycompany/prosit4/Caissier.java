@@ -23,9 +23,9 @@ public class Caissier extends Employe {
 
                public void AfficherSalaire() { 
         if (this.getNbr_heures() > 180) {
-            System.out.println("la salaire de l'employee (caissier) " + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((180 * 5)+ ((this.getNbr_heures() - 180) * 11.5)));
+            System.out.println("la salaire de l'employe (caissier) " + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((180 * 5)+ ((this.getNbr_heures() - 180) * 11.5)));
         } else {
-            System.out.println("la salaire de l'employee (caissier)" + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((this.getNbr_heures() * 5) ));
+            System.out.println("la salaire de l'employe (caissier)" + this.getIdentifiant() + " ( " + this.getNom() + " ) : " + ((this.getNbr_heures() * 5) ));
         }
         
                }
