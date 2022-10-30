@@ -14,7 +14,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 
-public class ProduitLegume extends Produit {
+public class ProduitLegume extends Produit implements Critere {
 
     private String saison;
     private float quantite;
@@ -33,6 +33,7 @@ public class ProduitLegume extends Produit {
         return this.quantite;
     }
 
+    @Override
     public boolean estFrais(String saison) {
         var x = 0;
         var y = 0;
