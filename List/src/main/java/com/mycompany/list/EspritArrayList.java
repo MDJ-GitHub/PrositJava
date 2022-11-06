@@ -4,9 +4,12 @@
  */
 package com.mycompany.list;
 
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
+
 
 /**
  *
@@ -43,14 +46,17 @@ public class EspritArrayList implements University {
 
     @Override
     public void trierEtudiantsParId() {
-        Collections.sort(list) ;
+            Collections.sort(list,new SortById()) ;
     }
 
     @Override
     public void trierEtudiantsParNom() {
-           Collections.sort(list,String) ;
+           Collections.sort(list,new SortByNom()) ;
     }
     
 
     
 }
+
+
+
