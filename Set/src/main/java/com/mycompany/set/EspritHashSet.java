@@ -12,40 +12,43 @@ import java.util.HashSet;
  */
 public class EspritHashSet implements GestionEnseignant {
 
-    HashSet <Enseignant> hset ;
+    HashSet<Enseignant> hset;
 
     public EspritHashSet() {
-        this.hset = new HashSet() ;
+        this.hset = new HashSet();
     }
-    
-    
+
     @Override
     public void ajouterEnseignant(Enseignant e) {
- hset.add(e) ;
+        hset.add(e);
     }
 
     @Override
     public boolean rechercherEnseignant(Enseignant e) {
-       return hset.contains(e) ;
+        return hset.contains(e);
     }
 
     @Override
     public boolean rechercherEnseignant(int id) {
-                        boolean x = false ;
+        boolean x = false;
         for (Enseignant r : hset) {
-           if (r.getId() == id) { x =  true ;} else {x =  false ;}
+            if (r.getId() == id) {
+                x = true;
+            } else {
+                x = false;
+            }
         };
-        return x ;
+        return x;
     }
 
     @Override
     public void supprimerEnseignant(Enseignant e) {
-        hset.remove(e) ;
+        hset.remove(e);
     }
 
     @Override
     public void displayEnseignants() {
-        System.out.println(hset) ;
+        System.out.println(hset);
     }
-    
+
 }

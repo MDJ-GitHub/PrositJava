@@ -15,7 +15,7 @@ public class EspritTreeSet implements GestionEnseignant {
     
  TreeSet <Enseignant> tset ;
 
-    public EspritTreeSet(TreeSet tset) {
+    public EspritTreeSet() {
         this.tset = new TreeSet() ;
     }
  
@@ -32,11 +32,15 @@ public class EspritTreeSet implements GestionEnseignant {
         
     @Override
     public boolean rechercherEnseignant(int id) {
-                boolean x = false ;
+        boolean x = false;
         for (Enseignant r : tset) {
-           if (r.getId() == id) { x =  true ;} else {x =  false ;}
+            if (r.getId() == id) {
+                x = true;
+            } else {
+                x = false;
+            }
         };
-        return x ;
+        return x;
     }
     
     
