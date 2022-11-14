@@ -4,6 +4,7 @@
  */
 package com.mycompany.set;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.TreeSet;
 
@@ -12,24 +13,23 @@ import java.util.TreeSet;
  * @author MDJMi
  */
 public class EspritTreeSet implements GestionEnseignant {
-    
- TreeSet <Enseignant> tset ;
+
+    TreeSet<Enseignant> tset;
 
     public EspritTreeSet() {
-        this.tset = new TreeSet() ;
+        this.tset = new TreeSet<Enseignant>(new SortById());
     }
- 
- 
-   @Override
+
+    @Override
     public void ajouterEnseignant(Enseignant e) {
         tset.add(e);
     }
 
     @Override
     public boolean rechercherEnseignant(Enseignant e) {
-       return tset.contains(e) ;
+        return tset.contains(e);
     }
-        
+
     @Override
     public boolean rechercherEnseignant(int id) {
         boolean x = false;
@@ -42,17 +42,26 @@ public class EspritTreeSet implements GestionEnseignant {
         };
         return x;
     }
-    
-    
 
     @Override
     public void supprimerEnseignant(Enseignant e) {
-      tset.remove(e) ;
+        tset.remove(e);
     }
 
     @Override
     public void displayEnseignants() {
-        System.out.println(tset) ;
+        System.out.println(tset);
     }
-    
+
+    @Override
+    public boolean equals(Object obj) {
+        final Enseignant other = (Enseignant) obj;
+        return rechercherEnseignant(other.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.hashCode();
+    }
+
 }

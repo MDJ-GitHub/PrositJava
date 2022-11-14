@@ -51,4 +51,15 @@ public class EspritHashSet implements GestionEnseignant {
         System.out.println(hset);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        final Enseignant other = (Enseignant) obj;
+        return rechercherEnseignant(other.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.hashCode();
+    }
+
 }
